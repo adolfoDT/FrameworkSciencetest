@@ -3,6 +3,7 @@ import boto3
 
 
 def send_email(companies_names):
+    print("enter")
 
     companies_names = " ,".join([company for company in companies_names])
     
