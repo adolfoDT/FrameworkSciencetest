@@ -1,3 +1,9 @@
+__author__ = 'Adolfo Diaz Taracena'
+__version__ = '1.0'
+__all__ = ['Exercise 2',
+           'Matrix']
+
+
 def isSafe(M, row, col, visited):
     global ROW, COL
  

@@ -1,3 +1,7 @@
+__author__ = 'Adolfo Diaz Taracena'
+__version__ = '1.0'
+__all__ = ['Exercise 1',
+           'Triple_Number']
 
 
 def triple_number_iterative(n,numbers):

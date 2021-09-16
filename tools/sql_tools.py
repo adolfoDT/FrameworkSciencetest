@@ -5,12 +5,12 @@ import sys
 import logging
 import decimal
 from pymssql import _mssql
-import pytz
+#import pytz
 from datetime import datetime, timedelta
 
 
-__author__ = 'Carlos Añorve/Benjamín N'
-__version__ = '1.1'
+__author__ = 'Adolfo Diaz Taracena'
+__version__ = '1.0'
 __all__ = ['SQLManagerConnections',
            'general_records']
 
@@ -106,5 +106,22 @@ class general_records(SQLManagerConnections):
             return []
         resp = self.__Ejecutar_qry("framework",qry)
         return resp
+
+    def insert_query(self,table,columns, values):
+        try:
+            qry =""" 
+            INSERT INTO  {table}(
+                {columns} 
+            ) VALUES ({values})
+                
+            """.format(table = table,columns= columns, values = values)
+            print(qry)
+        except Exception as err:
+            self.__logger.warning(f"There was a problem building the query: {err}")
+            return []
+        resp = self.__Ejecutar_qry("framework",qry)
+        return resp
+    
+    
 
     
